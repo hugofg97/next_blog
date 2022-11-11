@@ -39,7 +39,7 @@ export function OrganismArticleBlock(props: ArticleProps): JSX.Element {
         
             
             // objectFit="cover"   
-            // layout="fill"
+            layout="fill"
             //  priority={}
             quality={10}
             // placeholder="blur"
@@ -48,8 +48,8 @@ export function OrganismArticleBlock(props: ArticleProps): JSX.Element {
             //      objectPosition={}
             //  lazyRoot={}
 
-            width={props.imageWidth}
-            height={200}
+            // width={props.imageWidth}
+            // height={200}
           ></Image>
      
           {/* <div className={styles.blogArticleCategoryBadge}>
