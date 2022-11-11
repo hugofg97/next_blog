@@ -1,0 +1,127 @@
+
+#containerHomeBanner {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(
+      circle at 60% 20%,
+      #11081f 60%,
+      #1e0c3c 100%
+    );
+    padding: 80px 20px 20px 20px;
+    overflow: hidden;
+    z-index: 10;
+    @media (max-width: 1140px) {
+      padding: 40px 10px 10px 10px;
+    }
+}
+#titleContentHomeBanner {
+    max-width: 1250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.imageBox {
+    width: 410px;
+    height: 470px;
+    position: relative;
+    padding-top: 40px;
+    & img {
+      object-fit: contain;
+    }
+    @media (max-width: 450px) {
+  
+    }
+}
+#titleHomeBanner {
+    color: white;
+    max-width: 600px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    @media (max-width: 1140px) {
+      margin-top: 0px;
+      text-align: center;
+      padding: 16px;
+      font-size: 1.5rem;
+    }
+}
+.featuredSubWord {
+    color: #04d361;
+}
+.technologyGridBlock {
+    grid-area: block;
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    @media (max-width: 450px) {
+      display: flex;
+    }
+}
+.technologyCategoryBlock {
+
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-areas: "icon info" "content content";
+    grid-template-rows: 80px 150px;
+    border-radius: 7px;
+    width: 200px;
+    height: 230px;
+    padding: 20px 20px 0px 20px;
+    background: linear-gradient(270deg, #09090a, #121214);
+    border: 0.3px solid #41414d;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: start;
+    transition: ease margin-top 0.5s, height 0.5s;
+    z-index: 999;
+    &:hover {
+      border: 0.3px solid #04d361;
+      margin-top: 0px;
+      box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, 0.3);
+    }
+    @media (max-width: 450px) {
+      grid-template-columns: 200px;
+      grid-template-rows: 30px 150px;
+      height: 100px;
+      gap: 5px;
+      padding: 5px;
+      width: 100%;
+      margin-top: 8px;
+      &:hover {
+        border: 0.3px solid #1371e6;
+        margin-top: 8px;
+        box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, 0.3);
+      }
+    }
+}
+.iconBox {
+    grid-area: icon;
+    display: flex;
+    align-items: center;
+    border-radius: 150px;
+  
+    @media (max-width: 700px) {
+    }
+}
+.info  {
+    grid-area: info;
+    text-align: start;
+    padding: 0;
+    margin: 03px;
+    font-size: 1rem;
+    color: #04d361;
+}
+.contentInfo {
+    grid-area: content;
+    color: white;
+    @media (max-width: 450px) {
+      font-size: 0.8rem;
+    }
+}
