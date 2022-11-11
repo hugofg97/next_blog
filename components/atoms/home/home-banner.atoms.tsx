@@ -4,7 +4,7 @@ import Image from "next/image";
 export function HomeImageBox(): JSX.Element {
     return (
         <div className={styles.imageBox}>
-            <Image alt="" src="/images/moldura.webp" quality={50} width="384" height="419" placeholder="blur" ></Image>
+            <Image alt="" src="/images/moldura.webp" quality={50} width="384" height="419"  loading="eager" ></Image>
         </div>
     );
 }
