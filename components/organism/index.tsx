@@ -1,4 +1,4 @@
 
-export * from './home/home-banner.organism'
-export * from './home/home-blog.organism'
-export * from './blog/article-block.organism';
+export * from './home-banner.organism'
+export * from './home-blog.organism'
+export * from './article-block.organism';

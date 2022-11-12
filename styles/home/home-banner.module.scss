@@ -35,7 +35,7 @@
   
     }
 }
-#titleHomeBanner {
+.titleHomeBanner {
     color: white;
     max-width: 600px;
     font-weight: 900;
@@ -68,9 +68,9 @@
     display: grid;
     grid-template-columns: 200px;
     grid-template-areas: "icon info" "content content";
-    grid-template-rows: 80px 150px;
+    grid-template-rows: 30px 150px;
     border-radius: 7px;
-    width: 200px;
+    width: 230px;
     height: 230px;
     padding: 20px 20px 0px 20px;
     background: linear-gradient(270deg, #09090a, #121214);

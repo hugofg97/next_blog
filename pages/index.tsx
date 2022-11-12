@@ -1,6 +1,5 @@
 import Head from 'next/head'
 
-import {Hello} from '@atoms'
 import {HomeBanner, HomeBlogOranism} from '@organism'
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
         <HomeBanner></HomeBanner>
         <div style={{width: '100%', height:600}}></div>
         <HomeBlogOranism></HomeBlogOranism>
-    <Hello/>
     </div>
   )
 }

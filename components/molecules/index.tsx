@@ -1,2 +1,2 @@
 
-export * from './home/home-banner.molecules'
+export * from './home-banner.molecules'
