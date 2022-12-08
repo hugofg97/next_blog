@@ -4,7 +4,7 @@ export const menuListAcademy = [
         name: "Inicio",
     },
     {
-        path: "/conteudo",
+        path: "/blog",
         name: "Blog",
     },
     {
@@ -12,15 +12,13 @@ export const menuListAcademy = [
         name: "Serviços",
     },
     {
-        path: "/contato",
-        name: "Contato",
+        path: "/forum",
+        name: "Forum"
     },
     {
-        path: "/sobre",
-        name: "Sobre",
+        path: "/login",
+        name: "Login",
+        type: "button"
     },
-    {
-        path: "/politica-de-privacidade",
-        name: "Privacidade",
-    },
+
 ]

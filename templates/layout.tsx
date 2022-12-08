@@ -4,30 +4,40 @@ import React from "react"
 import { menuListAcademy } from "./menu-list"
 import headerStyles from '@styles/layout/header.module.scss'
 import Link from "next/link"
+import Image from "next/image"
+import { ButtonAtom } from "components/atoms/button.atom"
 
-const Layout = ({ children, bg }:{children: JSX.Element, bg?: string}): JSX.Element => {
+const Layout = ({ children, bg }: { children: JSX.Element, bg?: string }): JSX.Element => {
   return (
-    <div style={{  margin: '0 auto',
-      height: '100%'}}>
-      <div className={headerStyles.headerDesktop}>
-        {/* <StaticImage
-          src="../assets/logo.png"
-          width={200}
-          height={50}
-          quality="50"
-          loading="eager"
-          blurredOptions={{ toFormat: "WEBP" }}
-          placeholder="blurred"
+    <div style={{
+      margin: '0 auto',
+      height: '100%'
+    }}>
+      <div style={{ display: 'flex', justifyContent: "center" }}>
+        <div className={headerStyles.headerDesktop}>
+
+
+          <Image
+            alt="a"
+            src="/images/logo.png"
+            width={80}
+            height={50}
+            quality="50"
+            loading="eager"
+
+
           // placeholder="none"
-        /> */}
-        <div className={headerStyles.menuList}>
-          {menuListAcademy.map((itemMenu, index) => (
-            <Link href={itemMenu.path} key={index}>
-              <li className={headerStyles.menuLi}>{itemMenu.name}</li>
-            </Link>
-          ))}
+          />
+          <div className={headerStyles.menuList}>
+            {menuListAcademy.map((itemMenu, index) => (
+              <Link href={itemMenu.path} key={index}>
+                {itemMenu?.type == 'button' ? null : (<li className={headerStyles.menuLi}>{itemMenu.name}</li>)}
+                {itemMenu?.type == 'button' ? (<ButtonAtom></ButtonAtom>) : null}
+              </Link>
+            ))}
+          </div>
+          <div style={{ color: "white" }}>search</div>
         </div>
-        <div style={{ color: "white" }}>search</div>
       </div>
       <div className={headerStyles.headerMobile}>
         <div className={headerStyles.menuIcon}>

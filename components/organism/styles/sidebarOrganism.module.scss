@@ -1,0 +1,30 @@
+
+
+.siderbarOrganism {
+    color: rgba(200, 200, 200, 1);
+    // background: linear-gradient(180deg, #09090a, #1e0c3c);
+    background-image: radial-gradient(
+      circle at center,
+      #1e0c3c 20%,
+      #09090a 100%
+    );
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px 1px rgba(30, 30, 30, 0.6);
+    margin-top: 170px;
+    top: 120px;
+    max-width: 250px;
+    max-height: 800px;
+
+    width: 250px;
+    height: 800px;
+    position: sticky;
+    &:hover {
+  
+        background-image: radial-gradient(
+          circle at center,
+          #1e0c3c 50%,
+          #09090a 100%,
+          );
+          box-shadow: 1px 1px 20px 1px rgba(130, 87, 229, 0.6);
+    }
+}
