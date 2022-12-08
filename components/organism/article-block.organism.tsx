@@ -33,9 +33,18 @@ export function OrganismArticleBlock(
       <div className={`${styles.blogFeaturedImageBlock} ${props.classes.img}`}>
         <Image
           alt="helo"
+          sizes="
+          (max-width: 320px) 100vw,
+          (max-width: 1140px) 400px,
+          (max-width: 1240px) 400px,
+          (max-width: 1640px) 400px,
+          (max-width: 1740px) 400px,
+          (min-width: 1940px) 400px,
+          "
           loading="lazy"
           src={"/images/post.webp"}
-          layout="fill"
+          fill
+
           quality={10}
         ></Image>
 
@@ -65,6 +74,6 @@ export function OrganismArticleBlock(
           </Link>
         </div>
       </div>
-    </article>
+    </article >
   );
 }
