@@ -36,6 +36,7 @@ function BlogPage(): JSX.Element {
                             alt="Alt image"
                             src="/images/post.webp"
                             fill
+                            loading="eager"
                             quality={50}
                         ></Image>
                     </div>
