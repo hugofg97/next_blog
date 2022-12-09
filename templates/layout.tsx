@@ -16,18 +16,16 @@ const Layout = ({ children, bg }: { children: JSX.Element, bg?: string }): JSX.E
       <div style={{ display: 'flex', justifyContent: "center" }}>
         <div className={headerStyles.headerDesktop}>
 
+          <div style={{ width: 80, height: 50, position: 'relative', }}>
 
-          <Image
-            alt="a"
-            src="/images/logo.png"
-            width={80}
-            height={50}
-            quality="50"
-            loading="eager"
-
-
-          // placeholder="none"
-          />
+            <Image
+              alt="a"
+              src="/images/logo.png"
+              fill
+              quality="50"
+              loading="eager"
+            />
+          </div>
           <div className={headerStyles.menuList}>
             {menuListAcademy.map((itemMenu, index) => (
               <Link href={itemMenu.path} key={index}>
