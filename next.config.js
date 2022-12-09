@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   webpack: (config, { dev, isServer }) => {
     // Replace React with Preact only in client production build
@@ -7,6 +8,7 @@ const nextConfig = {
         react: "preact/compat",
         "react-dom/test-utils": "preact/test-utils",
         "react-dom": "preact/compat",
+        'react-ssr-prepass': 'preact-ssr-prepass',
       });
     }
 

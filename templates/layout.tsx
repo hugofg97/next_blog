@@ -19,13 +19,14 @@ const Layout = ({ children, bg }: { children: JSX.Element, bg?: string }): JSX.E
           <div style={{ width: 80, height: 50, position: 'relative', }}>
 
             <Image
-              alt="a"
+              alt="Linkou App"
               src="/images/logo.png"
               fill
               quality="50"
               loading="eager"
             />
           </div>
+
           <div className={headerStyles.menuList}>
             {menuListAcademy.map((itemMenu, index) => (
               <Link href={itemMenu.path} key={index}>
