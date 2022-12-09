@@ -2,11 +2,11 @@ import React from "react";
 import styles from "@styles/blog/blog-article.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-import { useMediaQuery } from "hooks";
+import { ButtonAtom } from "components/atoms/button.atom";
 
 interface Classes {
   img: string;
-  block: string
+  block: string;
 }
 interface ArticleBlockOrganismInterface {
   classes: Classes;
@@ -29,9 +29,7 @@ export function OrganismArticleBlock(
   props: ArticleBlockOrganismInterface
 ): JSX.Element {
   return (
-    <article
-      className={`${styles.blogArticleBlock} ${props.classes.block}`}
-    >
+    <article className={`${styles.blogArticleBlock} ${props.classes.block}`}>
       <div className={`${styles.blogFeaturedImageBlock} ${props.classes.img}`}>
         <Image
           alt="helo"
@@ -44,10 +42,9 @@ export function OrganismArticleBlock(
           (max-width: 1940px) 400px,
           (max-width: 2560px) 400px,
           "
-          loading={!props.index ? 'eager' : 'lazy'}
-          src='/images/post-400.jpg'
+          loading={!props.index ? "eager" : "lazy"}
+          src="/images/post-400.jpg"
           fill
-
           quality={10}
         ></Image>
 
@@ -73,10 +70,12 @@ export function OrganismArticleBlock(
         <div className={styles.blogArticleContainerButton}>
           <p style={{ color: "white", fontSize: "12px" }}> 0 Comentários</p>
           <Link href={`/${props.postSlug}`}>
-            <button>Continue lendo</button>
+            <ButtonAtom>
+              <span>Continue Lendo</span>
+            </ButtonAtom>
           </Link>
         </div>
       </div>
-    </article >
+    </article>
   );
 }

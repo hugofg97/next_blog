@@ -1,9 +1,9 @@
 .buttonAtom {
-    border: #04d361 1px solid;
+    border: rgba(130, 87, 229, 0.6) 1px solid;
     border-radius: 4px;
     padding: 8px;
     background: transparent;
-    color: #04d361;
+    color: rgba(130, 87, 229, 0.6);
     min-width: 100px;
     transition: margin-top 0.1s;
     transition-timing-function: ease;
@@ -11,8 +11,10 @@
     transition-property: all;
     cursor: pointer;
     &:hover {
-        box-shadow:0px 4px 4px 1px  #0b7039c9;
+        box-shadow:0px 4px 4px 1px  rgba(130, 87, 229, 0.6);
         margin-top: -2px;
+        background-color:rgba(130, 87, 229, 0.6);
+        color:white;
         margin-bottom: 2px;
     }
 }

@@ -1,11 +1,14 @@
-
-
 import classNames from './styles/buttonAtom.module.scss'
-export function ButtonAtom(): JSX.Element {
 
+export interface ButtonPropsInterface {
+    children: JSX.Element;
+}
 
+export function ButtonAtom({ children }: ButtonPropsInterface): JSX.Element {
 
     return (
-        <button className={classNames.buttonAtom}>Login</button>
+        <button
+            className={classNames.buttonAtom}
+        >{children}</button>
     )
 }

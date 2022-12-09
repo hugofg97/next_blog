@@ -2,7 +2,6 @@
 
 .siderbarOrganism {
     color: rgba(200, 200, 200, 1);
-    // background: linear-gradient(180deg, #09090a, #1e0c3c);
     background-image: radial-gradient(
       circle at center,
       #1e0c3c 20%,
@@ -12,10 +11,10 @@
     box-shadow: 1px 1px 20px 1px rgba(30, 30, 30, 0.6);
     margin-top: 170px;
     top: 120px;
-    max-width: 250px;
+    max-width: 350px;
     max-height: 800px;
 
-    width: 250px;
+    width: 350px;
     height: 800px;
     position: sticky;
     &:hover {

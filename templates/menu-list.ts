@@ -4,7 +4,7 @@ export const menuListAcademy = [
         name: "Inicio",
     },
     {
-        path: "/blog",
+        path: "/conteudo",
         name: "Blog",
     },
     {

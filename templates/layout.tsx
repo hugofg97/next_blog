@@ -32,7 +32,7 @@ const Layout = ({ children, bg }: { children: JSX.Element, bg?: string }): JSX.E
             {menuListAcademy.map((itemMenu, index) => (
               <Link href={itemMenu.path} key={index}>
                 {itemMenu?.type == 'button' ? null : (<li className={headerStyles.menuLi}>{itemMenu.name}</li>)}
-                {itemMenu?.type == 'button' ? (<ButtonAtom></ButtonAtom>) : null}
+                {itemMenu?.type == 'button' ? (<ButtonAtom><span>Login</span></ButtonAtom>) : null}
               </Link>
             ))}
           </div>
