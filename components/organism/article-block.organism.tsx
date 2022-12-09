@@ -44,7 +44,7 @@ export function OrganismArticleBlock(
           (max-width: 2560px) 400px,
           "
           loading="lazy"
-          src={`/images/${!useMediaQuery(400) ? 'post-400.jpg' : 'post-320.jpg'}`}
+          src={"/images/post.jpg"}
           fill
 
           quality={10}
