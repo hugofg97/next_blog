@@ -6,28 +6,7 @@ import { posts } from "mocks";
 import { OrganismArticleBlock } from "@organism";
 import { SidebarOrganism } from "components/organism/sidebar.organism";
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react"
 
-export const useMediaQuery = (width: number) => {
-    const [targetReached, setTargetReached] = useState(false)
-
-    const updateTarget = useCallback((e: { matches: any; }) => {
-        if (e.matches) setTargetReached(true)
-        else setTargetReached(false)
-    }, [])
-
-    useEffect(() => {
-        const media = window.matchMedia(`(max-width: ${width}px)`)
-        media.addEventListener('change', updateTarget)
-
-        // Check on mount (callback is not called until a change occurs)
-        if (media.matches) setTargetReached(true)
-
-        return () => media.removeEventListener('change', updateTarget)
-    }, [])
-
-    return targetReached
-}
 function BlogPage(): JSX.Element {
     return (
         <div>
