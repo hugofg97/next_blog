@@ -2,6 +2,7 @@ import React from "react";
 import styles from "@styles/blog/blog-article.module.scss";
 import Link from "next/link";
 import Image from "next/image";
+import { useMediaQuery } from "hooks";
 
 interface Classes {
   img: string;
@@ -34,15 +35,16 @@ export function OrganismArticleBlock(
         <Image
           alt="helo"
           sizes="
-          (max-width: 320px) 100vw,
+          (max-width: 320px) 320px,
           (max-width: 1140px) 400px,
           (max-width: 1240px) 400px,
           (max-width: 1640px) 400px,
           (max-width: 1740px) 400px,
-          (min-width: 1940px) 400px,
+          (max-width: 1940px) 400px,
+          (max-width: 2560px) 400px,
           "
           loading="lazy"
-          src={"/images/post.webp"}
+          src={`/images/${!useMediaQuery(400) ? 'post-400.jpg' : 'post-320.jpg'}`}
           fill
 
           quality={10}
