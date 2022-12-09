@@ -77,8 +77,6 @@
 }
 
 .blogFeaturedImageBlock {
-  // gap: 24px;
-  // padding:8px;
   width: 400px;
   height:200px;
   position: relative;
@@ -101,8 +99,8 @@
 }
 
 .blogFeatureImageBlockRetangle {
-  width: 440px;
-  height:300px;
+  width: 400px;
+  height:200px;
   @media (max-width: 840px) {
     width: 100%;
   }
