@@ -22,6 +22,7 @@ interface ArticleBlockOrganismInterface {
   imageWidth: number;
   imageHeight: number;
   articleContent: string;
+  index: number;
 }
 
 export function OrganismArticleBlock(
@@ -43,9 +44,8 @@ export function OrganismArticleBlock(
           (max-width: 1940px) 400px,
           (max-width: 2560px) 400px,
           "
-          loading="lazy"
+          loading={!props.index ? 'eager' : 'lazy'}
           src='/images/post-400.jpg'
-          // src={`/images/${!useMediaQuery(400) ? 'post-400.jpg' : 'post-320.jpg'}`}]
           fill
 
           quality={10}

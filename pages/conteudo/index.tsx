@@ -24,9 +24,9 @@ function BlogPage(): JSX.Element {
                 <div className={styles.blogArticlesContainer}>
                   {posts.map((post, index) => {
                     if (index < 1) {
-
                       return (
                         <OrganismArticleBlock
+                          index={index}
                           classes={{ block: articleStyles.blogArticleBlockRetangle, img: articleStyles.blogFeatureImageBlockRetangle }}
                           key={index}
                           {...post}
@@ -43,6 +43,7 @@ function BlogPage(): JSX.Element {
 
                     return (
                       <OrganismArticleBlock
+                        index={index}
                         classes={{ block: articleStyles.blogArticleBlockSquare, img: articleStyles.blogFeatureImageBlockSquare }}
                         key={index}
                         {...post}
