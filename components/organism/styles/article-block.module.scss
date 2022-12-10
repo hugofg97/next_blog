@@ -1,43 +1,55 @@
 .effectBlockArticle {
-position:relative;
-display:flex;
-width: 410px;
-justify-content: center;
-align-items: center;
-overflow: hidden;
-padding-top: 10px;
-border-radius:10px;
+  position: relative;
+  display: flex;
+  width: 410px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: transparent;
+  padding: 3px 0px 3px 0px;
+  border-radius: 10px;
 }
 
 .blogArticleBlock {
-  z-index:13;
-
-  color: rgba(200, 200, 200, 1);
-  background:#1e0c3c;
-  border-radius: 10px;
-  box-shadow: 1px 1px 20px 1px rgba(30, 30, 30, 0.6);
+  z-index: 1;
   position: relative;
-  transition: margin-top 0.4s;
-  transition-timing-function: ease;
-  transition-delay: 0s;
-  transition-property: all;
-  cursor:pointer;
-  &:hover {
-    margin-top: -5px;
-    margin-bottom: 5px;
-    background-image: radial-gradient(
-      circle at center,
-      #1e0c3c 50%,
-      #09090a 100%
-    );
+  color: rgba(200, 200, 200, 1);
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  background-image: radial-gradient(
+    circle at center,
+    #1e0c3c 40%,
+    #09090a 100%
+  );
+}
+.blogArticleBlock::before {
+  position: absolute;
+  content: "";
+  border-radius: 10px;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
-    box-shadow: 1px 1px 20px 1px rgb(82, 4, 238);
-  }
+  background-image: radial-gradient(
+    circle at center,
+    #1e0c3c 80%,
+    #09090a 100%
+  );
+
+  transition: opacity 0.4s linear;
+  opacity: 0;
+  z-index: 5;
+}
+.blogArticleBlock:hover::before {
+  opacity: 1;
 }
 
 .blogArticleBlockSquare {
   & img {
-    border-radius: 10px 10px 0px 0px !important;
+    border-radius: 10px 10px 10px 10px !important;
   }
   min-width: 280px;
   max-width: 400px;
@@ -65,7 +77,6 @@ border-radius:10px;
   }
 
   @media (max-width: 840px) {
-
     min-width: 280px;
     max-width: 400px;
     display: flex;
@@ -78,61 +89,39 @@ border-radius:10px;
   }
 }
 .effectBlockArticle:hover::before {
-
-  content: '';
+  content: "";
   position: absolute;
   width: 200px;
   height: 200%;
   filter: blur(50px);
-  background: rgb(130, 87, 229);
-  animation: animate 2s linear infinite;
-
+  background: rgb(71, 3, 228);
+  animation: animate 4s linear infinite;
 }
 .effectBlockArticle:hover::after {
-
-  content: '';
+  content: "";
   position: absolute;
   width: 200px;
   height: 200%;
-  inset:50px;
-  background: rgb(130, 87, 229);
-  animation: animate 8s linear infinite;
-  filter: blur(1px)
-
+  background: rgb(2, 240, 34);
+  animation: animate 6s linear infinite;
+  filter: blur(50px);
 }
 @keyframes animate {
-  
-    0% {
-      transform: rotate(0deg)
-    }
-  
+  0% {
+    transform: rotate(0deg);
+  }
 
-  
-    100% {
-      transform: rotate(350deg)
-    }
-  
+  100% {
+    transform: rotate(350deg);
+  }
 }
-// .effectBlockArticle:hover::after {
-
-//   content: '';
-//   position: absolute;
-
-//   border-radius:2px;
-
-// }
-
-
-
 .blogFeaturedImageBlock {
   width: 400px;
-  height:200px;
+  height: 200px;
   position: relative;
-  z-index:11;
+  z-index: 11;
   & img {
-   
     object-fit: cover;
-
   }
 
   @media (max-width: 840px) {
@@ -149,7 +138,7 @@ border-radius:10px;
 
 .blogFeatureImageBlockRetangle {
   width: 440px;
-  height:320px;
+  height: 320px;
   @media (max-width: 840px) {
     width: 100%;
   }
@@ -157,10 +146,9 @@ border-radius:10px;
 
 .blogArticleContent {
   display: flex;
-  z-index:12;
-
+  z-index: 12;
   flex-direction: column;
-  width:400px;
+  width: 400px;
   padding: 20px;
   justify-content: space-around;
   max-height: 400px;
@@ -172,7 +160,6 @@ border-radius:10px;
 
 .blogArticleContentSquare {
   width: 100%;
-  
 }
 
 .blogArticleContentRetangle {
