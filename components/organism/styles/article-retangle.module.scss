@@ -1,0 +1,43 @@
+.blogArticleBlockRetangle {
+    min-width: 840px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: raw;
+    align-items: flex-start;
+    text-align: center;
+    justify-content: space-between;
+    min-height: 200px;
+    max-height: 400px;
+    & img {
+      border-radius: 10px 0px 0px 10px !important;
+    }
+  
+    @media (max-width: 840px) {
+      min-width: 280px;
+      max-width: 390px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: center;
+      justify-content: flex-start;
+      min-height: 400px;
+      max-height: 600px;
+    }
+  }
+  .blogFeatureImageBlockRetangle {
+    width: 440px;
+    height: 320px;
+    @media (max-width: 840px) {
+      width: 100%;
+    }
+  }
+
+  .blogArticleContentRetangle {
+    max-width: 320px;
+    min-width: 200px;
+  
+    @media (max-width: 840px) {
+      max-width: 100%;
+    }
+  }
+  

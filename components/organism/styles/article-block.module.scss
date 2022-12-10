@@ -8,10 +8,18 @@
   background: transparent;
   padding: 3px 3px 3px 3px;
   border-radius: 10px !important;
+  
   @media (max-width: 840px) {
     width: 95%;
   }
 }
+.effectBlockArticle:hover {
+    
+
+    box-shadow: 
+     10px 10px 25px rgba(70, 3, 228, 0.35),
+     -10px -10px 25px rgba(70, 3, 228, 0.35)
+  }
 
 .blogArticleBlock {
   z-index: 1;
@@ -33,6 +41,8 @@
   box-sizing: border-box;
   top: 0;
   right: 0;
+ 
+
   bottom: 0;
   left: 0;
 
@@ -65,51 +75,28 @@
   max-height: 600px;
 }
 
-.blogArticleBlockRetangle {
-  min-width: 840px;
-  max-width: 1200px;
-  display: flex;
-  flex-direction: raw;
-  align-items: flex-start;
-  text-align: center;
-  justify-content: space-between;
-  min-height: 200px;
-  max-height: 400px;
-  & img {
-    border-radius: 10px 0px 0px 10px !important;
-  }
 
-  @media (max-width: 840px) {
-    min-width: 280px;
-    max-width: 390px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: center;
-    justify-content: flex-start;
-    min-height: 400px;
-    max-height: 600px;
-  }
-}
 .effectBlockArticle:hover::before {
   content: "";
   position: absolute;
-  width: 200px;
+  width: 500px;
   height: 200%;
   filter: blur(50px);
   background: rgb(71, 3, 228);
-  animation: animate 4s linear infinite;
+  animation: animate 6s linear infinite;
   border-radius: 10px !important;
   border-radius: 10px !important;
 }
 .effectBlockArticle:hover::after {
   content: "";
   position: absolute;
-  width: 200px;
+  width: 300px;
+
   height: 200%;
   background: rgb(2, 240, 34);
   animation: animate 6s linear infinite;
-  filter: blur(50px);
+  // filter: blur(50px);
+
   border-radius: 10px !important;
 }
 @keyframes animate {
@@ -142,13 +129,6 @@
   }
 }
 
-.blogFeatureImageBlockRetangle {
-  width: 440px;
-  height: 320px;
-  @media (max-width: 840px) {
-    width: 100%;
-  }
-}
 
 .blogArticleContent {
   display: flex;
@@ -168,14 +148,7 @@
   width: 100%;
 }
 
-.blogArticleContentRetangle {
-  max-width: 320px;
-  min-width: 200px;
 
-  @media (max-width: 840px) {
-    max-width: 100%;
-  }
-}
 
 .blogArticleCategoryBadge {
   margin-top: 10px;
