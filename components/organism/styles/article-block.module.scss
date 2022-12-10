@@ -14,7 +14,12 @@
   }
 }
 .effectBlockArticle:hover {
-    
+    & img {
+      // margin-top:-1px;
+      
+      filter: drop-shadow(1px 8px 20px rgba(0, 0, 0, 1)) ;
+      transition: all linear 0.5s;
+    }
 
     box-shadow: 
      10px 10px 25px rgba(70, 3, 228, 0.35),
@@ -48,7 +53,7 @@
 
   background-image: radial-gradient(
     circle at center,
-    #2f0475 10%,
+    #2f0475 30%,
     #09090a 100%
   );
 
