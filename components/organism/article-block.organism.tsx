@@ -47,7 +47,7 @@ export function OrganismArticleBlock(
             loading={!props.index ? "eager" : "lazy"}
             src="/images/post-400.jpg"
             fill
-            quality={10}
+            quality={50}
           ></Image>
 
           <div className={styles.blogArticleCategoryBadge}>
