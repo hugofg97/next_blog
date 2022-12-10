@@ -5,11 +5,14 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   background: transparent;
   padding: 8px 8px 12px 8px;
-  -webkit-border-radius: 10px !important;
-  -moz-border-radius: 10px !important;
-  border-radius: 10px !important;
+  -webkit-border-radius: 10px ;
+  -moz-border-radius: 10px ;
+  -khtml-border-radius: 10px ;
+  border-radius: 10px ;
   @media (max-width: 840px) {
     width: 95%;
   }
