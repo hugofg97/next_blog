@@ -99,6 +99,8 @@
   filter: blur(50px);
   background: rgb(71, 3, 228);
   animation: animate 4s linear infinite;
+  border-radius: 10px !important;
+  border-radius: 10px !important;
 }
 .effectBlockArticle:hover::after {
   content: "";
@@ -108,6 +110,7 @@
   background: rgb(2, 240, 34);
   animation: animate 6s linear infinite;
   filter: blur(50px);
+  border-radius: 10px !important;
 }
 @keyframes animate {
   0% {
