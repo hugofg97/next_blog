@@ -6,31 +6,35 @@
   align-items: center;
   overflow: hidden;
   background: transparent;
-  padding: 8px 3px 8px 3px;
+  padding: 8px 8px 12px 8px;
   border-radius: 10px !important;
   @media (max-width: 840px) {
     width: 95%;
   }
+  box-shadow: inset 10px 10px 25px rgba(70, 3, 228, 0.35),
+    inset -10px -10px 25px rgba(70, 3, 228, 0.35),
+     10px 10px 25px rgb(13, 1, 42),
+     -10px -10px 25px rgb(13, 1, 42);
 }
 .effectBlockArticle:hover {
-    & img {
-      // margin-top:-1px;
-      
-      filter: drop-shadow(1px 8px 20px rgba(0, 0, 0, 1))  saturate(150%) brightness(130%);
-      transition: all linear 0.5s;
-    }
-
-    box-shadow: 
-     10px 10px 25px rgba(70, 3, 228, 0.35),
-     -10px -10px 25px rgba(70, 3, 228, 0.35)
+  & img {
+    filter: drop-shadow(1px 8px 20px rgba(0, 0, 0, 1)) saturate(150%)
+      brightness(130%);
+    transition: all linear 0.5s;
   }
 
+  box-shadow: 0px  0px  30px 10px rgba(88, 36, 220, 0.6);
+}
+
 .blogArticleBlock {
+  box-shadow: 0px 5px 10px 3px #080808ec;
+
   z-index: 1;
   position: relative;
   color: rgba(200, 200, 200, 1);
   border-radius: 10px;
   position: relative;
+  // border : 1px solid #2c0260;
   cursor: pointer;
   background-image: radial-gradient(
     circle at center,
@@ -42,17 +46,16 @@
   position: absolute;
   content: "";
   border-radius: 10px;
-  box-sizing: border-box;
+  // box-sizing: border-box;
   top: 0;
   right: 0;
- 
 
   bottom: 0;
   left: 0;
 
   background-image: radial-gradient(
     circle at center,
-    #2f0475 30%,
+    #2f0475 100%,
     #09090a 100%
   );
 
@@ -79,14 +82,17 @@
   max-height: 600px;
 }
 
-
 .effectBlockArticle:hover::before {
   content: "";
   position: absolute;
   width: 300px;
   height: 200%;
-  filter: blur(50px);
-  background: linear-gradient(to bottom, rgb(71, 3, 228) 50%, rgb(2, 240, 34) 50%);
+  
+  background: linear-gradient(
+    to bottom,
+    rgb(191, 0, 255) 50%,
+    rgb(2, 240, 34) 50%
+  );
   animation: animate 4s linear infinite;
   border-radius: 10px !important;
   border-radius: 10px !important;
@@ -101,7 +107,7 @@
   }
 }
 .blogFeaturedImageBlock {
-  width: 390px;
+  width: 100%;
   height: 200px;
   position: relative;
   z-index: 11;
@@ -121,7 +127,6 @@
   }
 }
 
-
 .blogArticleContent {
   display: flex;
   z-index: 12;
@@ -139,8 +144,6 @@
 .blogArticleContentSquare {
   width: 100%;
 }
-
-
 
 .blogArticleCategoryBadge {
   margin-top: 10px;
