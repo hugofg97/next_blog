@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from '@styles/blog/blog-page.module.scss'
-import articleStyles from '@styles/blog/blog-article.module.scss'
+import articleStyles from 'components/organism/styles/article-block.module.scss'
 import Layout from "templates/layout";
 import { posts } from "mocks";
 import { OrganismArticleBlock } from "@organism";
@@ -21,7 +21,7 @@ function BlogPage(): JSX.Element {
             <div className={styles.blogFeedPage}>
               <div className={styles.blogContainerBigPost}>
                 <h1 className={styles.blogTitlePage}>Artigos recentes</h1>
-                <div className={styles.blogArticlesContainer}>
+                {/* <div className={styles.blogArticlesContainer}>
                   {posts.map((post, index) => {
                     if (index < 1) {
                       return (
@@ -36,10 +36,10 @@ function BlogPage(): JSX.Element {
                     return null
                   })}
                 </div>
-              </div>
-              <div className={styles.blogArticlesContainer}>
-                {posts.map((post, index) => {
-                  if (index >= 1) {
+              </div> */}
+                <div className={styles.blogArticlesContainer}>
+                  {posts.map((post, index) => {
+
 
                     return (
                       <OrganismArticleBlock
@@ -49,9 +49,10 @@ function BlogPage(): JSX.Element {
                         {...post}
                       ></OrganismArticleBlock>
                     )
-                  }
-                  return null
-                })}
+
+
+                  })}
+                </div>
               </div>
             </div>
             <div style={{ position: "static" }}>

@@ -1,5 +1,5 @@
 import styles from '@styles/home/home-blog.module.scss'
-import stylesArticle from '@styles/blog/blog-article.module.scss'
+import stylesArticle from './styles/article-block.module.scss'
 import { OrganismArticleBlock } from './article-block.organism'
 import { posts } from 'mocks'
 

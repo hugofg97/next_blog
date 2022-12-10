@@ -36,7 +36,7 @@ function BlogPage(): JSX.Element {
                         ></Image>
                     </div>
                     <div className={styles.blogContainerPage}>
-                        <div style={{ width: "75%" }}>
+                        <div style={{ width: "71%", minWidth: '800px' }}>
                             <p>
                                 Hello dude this is makiavelik swap they culo culo marrocos
                                 basuresco malala que veio pra ficar dub dubs quero ve nhaaaab
@@ -80,7 +80,7 @@ function BlogPage(): JSX.Element {
                                 alala que veio pra ficar dub dubs quero
                             </p>
                         </div>
-                        <div style={{ position: "static" }}>
+                        <div style={{ position: "static", width: '23%' }}>
                             <SidebarOrganism></SidebarOrganism>
                         </div>
                     </div>

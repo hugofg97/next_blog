@@ -16,7 +16,7 @@ const Layout = ({ children, bg }: { children: JSX.Element, bg?: string }): JSX.E
       <div style={{ display: 'flex', justifyContent: "center" }}>
         <div className={headerStyles.headerDesktop}>
 
-          <div style={{ width: 80, height: 50, position: 'relative', }}>
+          <div style={{ width: 180, height: 50, position: 'relative', }}>
 
             <Image
               alt="Linkou App"
@@ -58,7 +58,7 @@ const Layout = ({ children, bg }: { children: JSX.Element, bg?: string }): JSX.E
       </div>
       <main style={{
         margin: '0 auto',
-        backgroundImage: 'radial-gradient(circle at center,#1e0c3c,#11081f 100%)'
+        background: 'linear-gradient(90deg,#09090a  , #1e0c3c 20%,#1e0c3c 80%,#09090a )'
       }}>{children}</main>
     </div>
   )
