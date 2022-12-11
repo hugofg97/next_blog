@@ -71,7 +71,7 @@
   opacity: 0;
   z-index: 5;
 }
-.blogArticleBlock:hover::before {
+.blogArticleBlock:hover::before, .blogArticleBlock:active::before {
   opacity: 1;
 }
 
@@ -90,7 +90,7 @@
   max-height: 600px;
 }
 
-.effectBlockArticle:hover::before {
+.effectBlockArticle:hover::before,  .effectBlockArticle:active::before {
   content: "";
   position: absolute;
   width: 300px;
