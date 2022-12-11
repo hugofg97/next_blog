@@ -170,8 +170,9 @@
   display: flex;
   font-size: 12px;
   flex-direction: raw;
-  justify-content: space-around;
-  align-items: stretch;
+  justify-content: space-between;
+  align-items: center;
+  // align-items: stretch;
   padding-bottom: 26px;
 }
 

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import classNames from './styles/buttonAtom.module.scss'
 
 export interface ButtonPropsInterface {
@@ -11,9 +12,10 @@ export function ButtonAtom({ children }: ButtonPropsInterface): JSX.Element {
 
             <button
                 className={classNames.buttonAtom}
-            ><a href="">
+            >
+                <span className={classNames.linkBtn}>
                     {children}
-                </a>
+                </span>
             </button>
         </div>
     )

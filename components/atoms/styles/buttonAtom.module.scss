@@ -4,7 +4,12 @@
     height: 50px;
     margin: 20px;
 }
-.containerBtn .buttonAtom a {
+.buttonAtom {
+    background: transparent;
+    border: none;
+    cursor:pointer;
+}
+.containerBtn .buttonAtom .linkBtn {
     position: absolute;
     top:0;
     left:0;
@@ -15,11 +20,12 @@
     align-items: center;
     background:rgba(255,255,255,0.05);
     box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-    border-top: 1px solid rgba(255,255,255,0.1);
-    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.1);
     color: #FFF;
     z-index:1;
-    font-weight: 400;
+    font-size:14px;
+    font-weight: 700;
+    text-shadow: 2px 2px 1px #000;
     letter-spacing: 1px;
     text-decoration: none;
     overflow: hidden;
@@ -27,10 +33,10 @@
     backdrop-filter: blur(15px);
 
 }
-.containerBtn .buttonAtom:hover a {
+.containerBtn .buttonAtom:hover .linkBtn {
     letter-spacing: 3px;
 }
-.containerBtn .buttonAtom a::before {
+.containerBtn .buttonAtom .linkBtn::before {
     content: '';
     position: absolute;
     top: 0;
@@ -41,7 +47,7 @@
     transform: skewX(45deg) translateX(0);
     transition: 0.5s;
 }   
-.containerBtn .buttonAtom:hover a::before {
+.containerBtn .buttonAtom:hover .linkBtn::before {
     transform: skewX(45deg) translate(200%);
 }
 .containerBtn .buttonAtom::before {
@@ -51,21 +57,19 @@
     transform: translateX(-50%);
     bottom: -5%;
     width:30px;
-    height: 10px;
+    height: 2px;
     background: rgb(2, 240, 34);
-    border-radius: 10px;
     transition: 0.5s;
     box-shadow: 0 0 5px rgb(2, 240, 34),
     0 0 15px rgb(2, 240, 34),
-    0 0 35px rgb(2, 240, 34),
-    0 0 55px rgb(2, 240, 34),
+    0 0 30px rgb(2, 240, 34),
+    0 0 60px rgb(2, 240, 34),
 }
 .containerBtn .buttonAtom:hover::before {
-    bottom:0;
-    height: 50%;
-    width: 80%;
-    border-radius: 30px;
-    transition-delay: 0.2s;
+    // bottom:0;
+    width: 100%;
+    // transition-delay: 0.2s;
+
 }
 .containerBtn .buttonAtom::after {
     content: '';
@@ -74,19 +78,17 @@
     transform: translateX(-50%);
     top: -5%;
     width:30px;
-    height: 10px;
+    height: 2px;
     background: rgb(2, 240, 34);
-    border-radius: 10px;
     transition: 0.5s;
-    box-shadow: 0 0 5px rgb(2, 240, 34),
+    box-shadow:  0 0 5px rgb(2, 240, 34),
     0 0 15px rgb(2, 240, 34),
-    0 0 35px rgb(2, 240, 34),
-    0 0 55px rgb(2, 240, 34),
+    0 0 30px rgb(2, 240, 34),
+    0 0 60px rgb(2, 240, 34),
 }
 .containerBtn .buttonAtom:hover::after {
-    top:0;
-    height: 50%;
-    width: 80%;
-    border-radius: 30px;
-    transition-delay: 0.2s;
+    // top:0;
+    width: 100%;
+    // transition-delay: 0.2s;
+
 }
