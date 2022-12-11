@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+
 // import '../styles/organism/home/home-banner.scss'
 import type { AppProps } from 'next/app'
 

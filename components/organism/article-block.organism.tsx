@@ -72,7 +72,7 @@ export function OrganismArticleBlock(
             <span style={{ color: "white" }}>{props.date}</span>
           </div>
           <div className={styles.blogArticleContainerButton}>
-            <ButtonAtom text={"Continue Lendo"} />
+            <ButtonAtom text={"Ler Artigo"} />
           </div>
         </div>
       </div>
