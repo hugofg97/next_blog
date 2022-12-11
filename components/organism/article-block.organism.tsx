@@ -9,7 +9,7 @@ const sizes = `   (max-width: 320px) 320px,
 (max-width: 1640px) 400px,
 (max-width: 1740px) 400px,
 (max-width: 1940px) 400px,
-(max-width: 2560px) 400px,`
+(max-width: 2560px) 400px,`;
 interface Classes {
   img: string;
   block: string;
@@ -36,7 +36,6 @@ export function OrganismArticleBlock(
 ): JSX.Element {
   return (
     <article className={styles.effectBlockArticle}>
-
       <div className={`${styles.blogArticleBlock} ${props.classes.block}`}>
         <div className={`${styles.blogFeaturedImageBlock}`}>
           <Image
@@ -49,17 +48,20 @@ export function OrganismArticleBlock(
           ></Image>
 
           <div className={styles.blogArticleCategoryBadge}>
-            {props.categoryName}
+            <span>{props.categoryName}</span>
           </div>
+
           <div className={styles.clipAuthor}>
-            <Image
-              alt="helo"
-              sizes={sizes}
-              loading={!props.index ? "eager" : "lazy"}
-              src="/images/banner-2.png"
-              fill
-              quality={50}
-            ></Image>
+            <div>
+              <Image
+                alt="helo"
+                sizes={sizes}
+                loading={!props.index ? "eager" : "lazy"}
+                src="/images/banner-2.png"
+                fill
+                quality={50}
+              ></Image>
+            </div>
           </div>
         </div>
         <div className={`${styles.blogArticleContent} `}>
@@ -68,14 +70,10 @@ export function OrganismArticleBlock(
           </Link>
           <div className={styles.blogArticleMeta}>
             <span style={{ color: "white" }}>{props.date}</span>
-
-
           </div>
           <div className={styles.blogArticleContainerButton}>
-
             <ButtonAtom text={"Continue Lendo"} />
           </div>
-
         </div>
       </div>
     </article>
