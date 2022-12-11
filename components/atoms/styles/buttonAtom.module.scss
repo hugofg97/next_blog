@@ -1,7 +1,7 @@
 .containerBtn {
     position: relative;
     width: 155px;
-    height: 50px;
+    height: 40px;
     margin: 20px;
 }
 .buttonAtom {
@@ -30,6 +30,8 @@
     overflow: hidden;
     transition: 0.5s;
     backdrop-filter: blur(15px);
+    border-radius:30px;
+
 
 }
 .containerBtn .buttonAtom:hover .linkBtn {
@@ -50,6 +52,8 @@
     transform: skewX(45deg) translate(200%);
 }
 .containerBtn .buttonAtom::before {
+    border-radius:30px;
+
     content: '';
     position: absolute;
     left: 50%;
@@ -61,11 +65,11 @@
     transition: 1s;
     box-shadow: 0 0 5px rgb(93, 2, 240),
     0 0 15px rgb(93, 2, 240),
-    0 0 30px rgb(93, 2, 240),
-    0 0 60px rgb(93, 2, 240),
+    0 0 15px rgb(93, 2, 240),
+    0 0 15px rgb(93, 2, 240),
 }
 .containerBtn .buttonAtom:hover::before {
-    // transform: rotate(90deg);
+    border-radius:30px;
     bottom:0;
     width: 100%;
     height:100%;
@@ -75,6 +79,7 @@
 
 }
 .containerBtn .buttonAtom::after {
+    border-radius:30px;
     content: '';
     position: absolute;
     left: 50%;
@@ -86,13 +91,15 @@
     transition: 1s;
     box-shadow:  0 0 5px rgb(93, 2, 240),
     0 0 15px rgb(93, 2, 240),
-    0 0 30px rgb(93, 2, 240),
-    0 0 60px rgb(93, 2, 240),
+    0 0 15px rgb(93, 2, 240),
+    0 0 15px rgb(93, 2, 240),
 }
 .containerBtn .buttonAtom:hover::after {
-    
+    border-radius:30px;
     top:0;
     width: 100%;
+    height:100%;
+  
     transition-delay: 0.2s;
 
 }

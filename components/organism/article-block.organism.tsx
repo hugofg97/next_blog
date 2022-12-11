@@ -51,6 +51,16 @@ export function OrganismArticleBlock(
           <div className={styles.blogArticleCategoryBadge}>
             {props.categoryName}
           </div>
+          <div className={styles.clipAuthor}>
+            <Image
+              alt="helo"
+              sizes={sizes}
+              loading={!props.index ? "eager" : "lazy"}
+              src="/images/banner-2.png"
+              fill
+              quality={50}
+            ></Image>
+          </div>
         </div>
         <div className={`${styles.blogArticleContent} `}>
           <Link href={`/${props.postSlug}`}>
