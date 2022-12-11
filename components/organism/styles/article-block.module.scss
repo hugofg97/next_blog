@@ -15,9 +15,9 @@
   overflow-y: hidden;
   background: transparent;
   padding: 8px 8px 12px 8px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -khtml-border-radius: 10px;
+  // -webkit-border-radius: 10px;
+  // -moz-border-radius: 10px;
+  // -khtml-border-radius: 10px;
   border-radius: 2px;
   @media (max-width: 840px) {
     width: 95%;
@@ -29,8 +29,8 @@
 }
 .effectBlockArticle:hover {
   & img {
-    filter: drop-shadow(1px 8px 20px rgba(0, 0, 0, 1)) saturate(150%)
-      brightness(130%);
+    // filter: drop-shadow(1px 8px 20px rgba(0, 0, 0, 1)) saturate(150%)
+    //   brightness(130%);
     transition: all linear 0.5s;
   }
 
@@ -38,11 +38,18 @@
 }
 
 .blogArticleBlock {
+  &:hover {
+    & h1 {
+   
+      text-shadow:0px 0px 10px  rgb(6, 246, 246)
+    }
+
+  }
   box-shadow: 0px 5px 10px 3px #080808ec;
   z-index: 1;
   position: relative;
   color: rgba(200, 200, 200, 1);
-  border-radius: 2px;
+  // border-radius: 2px;
   position: relative;
   // border : 1px solid #2c0260;
   cursor: pointer;
@@ -51,11 +58,14 @@
     #1e0c3c 40%,
     #09090a 100%
   );
+
+
+  
 }
 .blogArticleBlock::before {
   position: absolute;
   content: "";
-  border-radius: 10px;
+  // border-radius: 10px;
   top: 0;
   right: 0;
   bottom: 0;
@@ -67,7 +77,7 @@
     #09090a 100%
   );
 
-  transition: opacity 0.5s linear;
+  transition: opacity 1s linear;
   opacity: 0;
   z-index: 5;
 }
@@ -77,7 +87,7 @@
 
 .blogArticleBlockSquare {
   & img {
-    border-radius: 10px 10px 10px 10px !important;
+    // border-radius: 10px 10px 10px 10px !important;
   }
   min-width: 280px;
   max-width: 390px;
@@ -142,6 +152,7 @@
   justify-content: space-around;
   max-height: 400px;
   min-height: 280px;
+ 
   @media (max-width: 840px) {
     width: 100%;
   }
