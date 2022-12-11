@@ -1,34 +1,34 @@
 .effectBlockArticle {
   position: relative;
   display: flex;
-  width: 410px;
+  width: 400px;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   overflow-x: hidden;
   overflow-y: hidden;
-  background: transparent;
-  padding: 8px 8px 12px 8px;
+  background: transparenret;
+  padding: 6px 8px 8px 8px;
   border-radius: 2px;
-  @media (max-width: 840px) {
+  @media (max-width: 400px) {
     width: 95%;
   }
-  box-shadow:
-     0px 0px 15px 2px rgba(70, 3, 228, 0.35),
-     inset 10px 10px 25px rgb(13, 1, 42),
-     inset -10px -10px 25px rgb(13, 1, 42);
+  transition: ease 0.5s;
 }
 .effectBlockArticle:hover {
   & img {
     transition: all linear 0.5s;
   }
 
-  box-shadow: 0px 0px 30px 10px rgba(88, 36, 220, 0.6);
+  box-shadow:
+  0px 0px 35px 5px rgba(70, 3, 228, 0.35),
+  inset 10px 10px 25px rgb(0, 0, 0),
+  inset -10px -10px 25px rgb(1, 0, 4);
 }
 
 .blogArticleBlock {
 
-  box-shadow: 0px 5px 10px 3px #080808ec;
+  box-shadow: 0px 0px 10px 3px #080808ec;
   z-index: 1;
   position: relative;
   color: rgba(200, 200, 200, 1);
@@ -36,12 +36,9 @@
   cursor: pointer;
   background-image: radial-gradient(
     circle at center,
-    #1e0c3c 40%,
+    #1e0c3c 10%,
     #09090a 100%
   );
-
-
-  
 }
 .blogArticleBlock::before {
   position: absolute;
@@ -50,9 +47,6 @@
   right: 0;
   bottom: 0;
   left: 0;
-
-
-
   transition: opacity 1s linear;
   opacity: 0;
   z-index: 5;
@@ -76,15 +70,15 @@
 .effectBlockArticle:hover::before,  .effectBlockArticle:active::before {
   content: "";
   position: absolute;
-  width: 300px;
+  width: 200px;
   height: 200%;
 
   background: linear-gradient(
     to bottom,
-    rgb(2, 240, 34) 50%,
-    rgb(2, 240, 34) 50%
+    rgb(93, 2, 240) 50%,
+    rgb(93, 2, 240) 50%
   );
-  filter:blur(50px);
+  filter:blur(5px);
   animation: animate 4s linear infinite;
 }
 @keyframes animate {
