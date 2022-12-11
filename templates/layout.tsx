@@ -3,6 +3,7 @@ import React from "react"
 
 import { menuListAcademy } from "./menu-list"
 import headerStyles from '@styles/layout/header.module.scss'
+import mainClassNames from './styles/main.module.scss'
 import Link from "next/link"
 import Image from "next/image"
 import { ButtonAtom } from "components/atoms/button.atom"
@@ -44,22 +45,10 @@ const Layout = ({ children, bg }: { children: JSX.Element, bg?: string }): JSX.E
           <div></div>
           <div></div>
         </div>
-        {/* <StaticImage
-          src="../assets/logo.png"
-          width={120}
-          height={80}
-          quality="50"
-          loading="eager"
-          blurredOptions={{ toFormat: "WEBP" }}
-          placeholder="blurred"
-          // placeholder="none"
-        /> */}
+
         <div style={{ color: "white" }}>search</div>
       </div>
-      <main style={{
-        margin: '0 auto',
-        background: 'linear-gradient(90deg,#09090a  , #1e0c3c 20%,#1e0c3c 80%,#09090a )'
-      }}>{children}</main>
+      <main className={mainClassNames.mainContainer}>{children}</main>
     </div>
   )
 }
