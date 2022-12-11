@@ -13,46 +13,27 @@
   @media (max-width: 400px) {
     width: 95%;
   }
-  transition: ease 0.5s;
+  transition: box-shadow ease 1.5s;
 }
 .effectBlockArticle:hover {
-  & img {
-    transition: all linear 0.5s;
-  }
-
   box-shadow:
-  0px 0px 35px 5px rgba(70, 3, 228, 0.35),
+  0px 0px 35px 15px rgba(70, 3, 228, 0.35),
   inset 10px 10px 25px rgb(0, 0, 0),
   inset -10px -10px 25px rgb(1, 0, 4);
 }
 
 .blogArticleBlock {
-
   box-shadow: 0px 0px 10px 3px #080808ec;
   z-index: 1;
   position: relative;
   color: rgba(200, 200, 200, 1);
   position: relative;
   cursor: pointer;
-  background-image: radial-gradient(
+  background: radial-gradient(
     circle at center,
     #1e0c3c 10%,
     #09090a 100%
   );
-}
-.blogArticleBlock::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transition: opacity 1s linear;
-  opacity: 0;
-  z-index: 5;
-}
-.blogArticleBlock:hover::before, .blogArticleBlock:active::before {
-  opacity: 1;
 }
 
 .blogArticleBlockSquare {
@@ -67,10 +48,10 @@
   max-height: 600px;
 }
 
-.effectBlockArticle:hover::before,  .effectBlockArticle:active::before {
+.effectBlockArticle::before,  .effectBlockArticle::before {
   content: "";
   position: absolute;
-  width: 200px;
+  width: 500px;
   height: 200%;
 
   background: linear-gradient(
@@ -78,18 +59,25 @@
     rgb(93, 2, 240) 50%,
     rgb(93, 2, 240) 50%
   );
-  filter:blur(5px);
-  animation: animate 4s linear infinite;
+  transition: opacity ease 1s;
+  opacity: 0;
+  // filter:blur(150px);
+  // animation: animate 4s linear infinite;
 }
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
+.effectBlockArticle:hover::before,  .effectBlockArticle:active::before {
+  opacity: 1;
+  // filter:blur(150px);
+  // animation: animate 4s linear infinite;
+}
+// @keyframes animate {
+//   0% {
+//     transform: rotate(0deg);
+//   }
 
-  100% {
-    transform: rotate(350deg);
-  }
-}
+//   100% {
+//     transform: rotate(350deg);
+//   }
+// }
 .blogFeaturedImageBlock {
   width: 100%;
   height: 200px;
