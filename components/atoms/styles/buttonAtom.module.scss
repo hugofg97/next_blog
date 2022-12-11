@@ -52,20 +52,20 @@
     bottom: -5%;
     width:30px;
     height: 10px;
-    background: #f00;
+    background: rgb(2, 240, 34);
     border-radius: 10px;
     transition: 0.5s;
-    box-shadow: 0 0 5px #f00,
-    0 0 15px #f00,
-    0 0 35px #f00,
-    0 0 55px #f00,
+    box-shadow: 0 0 5px rgb(2, 240, 34),
+    0 0 15px rgb(2, 240, 34),
+    0 0 35px rgb(2, 240, 34),
+    0 0 55px rgb(2, 240, 34),
 }
 .containerBtn .buttonAtom:hover::before {
     bottom:0;
     height: 50%;
     width: 80%;
     border-radius: 30px;
-    transition-delay: 0.5s;
+    transition-delay: 0.2s;
 }
 .containerBtn .buttonAtom::after {
     content: '';
@@ -75,68 +75,18 @@
     top: -5%;
     width:30px;
     height: 10px;
-    background: #f00;
+    background: rgb(2, 240, 34);
     border-radius: 10px;
     transition: 0.5s;
-    box-shadow: 0 0 5px #f00,
-    0 0 15px #f00,
-    0 0 35px #f00,
-    0 0 55px #f00,
+    box-shadow: 0 0 5px rgb(2, 240, 34),
+    0 0 15px rgb(2, 240, 34),
+    0 0 35px rgb(2, 240, 34),
+    0 0 55px rgb(2, 240, 34),
 }
 .containerBtn .buttonAtom:hover::after {
     top:0;
     height: 50%;
     width: 80%;
     border-radius: 30px;
-    transition-delay: 0.5s;
+    transition-delay: 0.2s;
 }
-// .buttonAtom {
-//     z-index:1;
-//     display:flex;
-//     justify-content: center;
-//     border: rgba(130, 87, 229, 1) 1px solid;
-//     border-radius: 4px;
-//     padding: 8px;
-//     background: linear-gradient(60deg, rgb(164, 148, 226) 50%,
-//     rgba(16, 1, 38,0.8)50%);
-//     color: rgba(130, 87, 229, 1);
-//     min-width: 100px;
-//     backdrop-filter: blur(0px);
-//     transition: margin-top 0.1s;
-//     transition-timing-function: ease;
-//     transition-delay: 0s;
-//     transition-property: all;
-
-//     cursor: pointer;
-//     &:hover {
-//         // box-shadow:0px 4px 4px 1px  rgba(130, 87, 229, 1);
-//         // margin-top: -2px;
-//         background-color:rgba(130, 87, 229, 1);
-//         color:white;
-//         margin-bottom: 2px;
-//     }
-  
-// }
-// .buttonAtom::before {
-//     z-index:-1;
-//     content: '';
-//     position:absolute;
-//     width: 30px;
-//     top:-3px;
-//     border-radius:5%;
-//     height:40px;
-//     backdrop-filter: blur(50px);
-    
-//     background:rgb(2, 240, 34) 50%;
-// }
-// .buttonAtom::after {
-//     z-index:-1;
-//     content: '';
-//     position:absolute;
-//     width: 30px;
-//     top:-3px;
-
-//     filter: blur(5px);
-//     height:40px;
-//     background:rgb(2, 240, 34) 50%;
-// }

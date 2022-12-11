@@ -4,20 +4,11 @@
   width: 410px;
   justify-content: center;
   align-items: center;
-  -webkit-overflow: hidden;
-  -moz-overflow: hidden;
   overflow: hidden;
-  -webkit-overflow-x: hidden;
-  -moz-overflow-x: hidden;
   overflow-x: hidden;
-  -webkit-overflow-y: hidden;
-  -moz-overflow-y: hidden;
   overflow-y: hidden;
   background: transparent;
   padding: 8px 8px 12px 8px;
-  // -webkit-border-radius: 10px;
-  // -moz-border-radius: 10px;
-  // -khtml-border-radius: 10px;
   border-radius: 2px;
   @media (max-width: 840px) {
     width: 95%;
@@ -29,8 +20,6 @@
 }
 .effectBlockArticle:hover {
   & img {
-    // filter: drop-shadow(1px 8px 20px rgba(0, 0, 0, 1)) saturate(150%)
-    //   brightness(130%);
     transition: all linear 0.5s;
   }
 
@@ -43,9 +32,7 @@
   z-index: 1;
   position: relative;
   color: rgba(200, 200, 200, 1);
-  // border-radius: 2px;
   position: relative;
-  // border : 1px solid #2c0260;
   cursor: pointer;
   background-image: radial-gradient(
     circle at center,
@@ -59,17 +46,12 @@
 .blogArticleBlock::before {
   position: absolute;
   content: "";
-  // border-radius: 10px;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 
-  background-image: radial-gradient(
-    circle at center,
-    #2f0475 100%,
-    #09090a 100%
-  );
+
 
   transition: opacity 1s linear;
   opacity: 0;
@@ -80,9 +62,6 @@
 }
 
 .blogArticleBlockSquare {
-  & img {
-    // border-radius: 10px 10px 10px 10px !important;
-  }
   min-width: 280px;
   max-width: 390px;
   display: flex;
@@ -102,9 +81,10 @@
 
   background: linear-gradient(
     to bottom,
-    rgb(191, 0, 255) 50%,
+    rgb(2, 240, 34) 50%,
     rgb(2, 240, 34) 50%
   );
+  filter:blur(50px);
   animation: animate 4s linear infinite;
 }
 @keyframes animate {
