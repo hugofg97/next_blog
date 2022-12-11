@@ -34,7 +34,7 @@ const Layout = ({ children, bg }: { children: JSX.Element, bg?: string }): JSX.E
                 {itemMenu?.type == 'button' ? null : (<li className={headerStyles.menuLi}>{itemMenu.name}</li>)}
               </Link>
             ))}
-            <ButtonAtom text="Login" />
+
           </div>
           <div style={{ color: "white" }}>Pesquisar</div>
         </div>
