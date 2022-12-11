@@ -6,23 +6,25 @@
   align-items: center;
   background: transparent;
   padding: 6px 8px 8px 8px;
-  border-radius:15px;
-  margin-bottom:20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
 
   @media (max-width: 400px) {
     width: 95%;
   }
+
   transition: box-shadow ease 1.5s;
 }
+
 .effectBlockArticle:hover {
   box-shadow:
-  0px 0px 35px 15px rgba(70, 3, 228, 0.35),
-  inset 10px 10px 25px rgb(0, 0, 0),
-  inset -10px -10px 25px rgb(1, 0, 4);
+    0px 0px 35px 15px rgba(70, 3, 228, 0.35),
+    inset 10px 10px 25px rgb(0, 0, 0),
+    inset -10px -10px 25px rgb(1, 0, 4);
 }
 
 .blogArticleBlock {
-  border-radius:15px;
+  border-radius: 15px;
 
   box-shadow: 0px 0px 10px 3px #080808ec;
   z-index: 1;
@@ -30,11 +32,9 @@
   color: rgba(200, 200, 200, 1);
   position: relative;
   cursor: pointer;
-  background: radial-gradient(
-    circle at center,
-    #1e0c3c 10%,
-    #09090a 100%
-  );
+  background: radial-gradient(circle at center,
+      #1e0c3c 10%,
+      #09090a 100%);
 }
 
 .blogArticleBlockSquare {
@@ -47,25 +47,24 @@
   max-height: 600px;
 }
 
-.effectBlockArticle::before{
+.effectBlockArticle::before {
   content: "";
-  -webkit-border-radius:15px;
-  -moz-border-radius:15px;
-  -o-border-radius:15px;
-  border-radius:15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgb(93, 2, 240) 50%,
-    rgb(93, 2, 240) 50%
-  );
+  background: linear-gradient(to bottom,
+      rgb(93, 2, 240) 50%,
+      rgb(93, 2, 240) 50%);
   transition: opacity ease 1s;
   opacity: 0;
 }
 
-.effectBlockArticle:hover::before,  .effectBlockArticle:active::before {
+.effectBlockArticle:hover::before,
+.effectBlockArticle:active::before {
   opacity: 1;
 }
 
@@ -74,11 +73,13 @@
   height: 200px;
   position: relative;
   z-index: 11;
+
   & img {
-  border-top-left-radius:15px;
-  border-top-right-radius:15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     object-fit: cover;
   }
+
   @media (max-width: 840px) {
     width: 100% !important;
   }
@@ -86,6 +87,7 @@
 
 .blogFeatureImageBlockSquare {
   width: 390px;
+
   @media (max-width: 840px) {
     width: 100%;
   }
@@ -101,8 +103,8 @@
   justify-content: flex-start;
   align-items: flex-start;
   max-height: 400px;
-  border-top: 1px white solid;
   min-height: 200px;
+
   @media (max-width: 840px) {
     width: 100%;
   }
@@ -114,8 +116,9 @@
 
 .blogArticleCategoryBadge {
   position: absolute;
-  width:100%;
+  width: 100%;
   top: -15px;
+
   & span {
     margin-bottom: 16px;
     display: inline-block;
@@ -153,91 +156,89 @@
 }
 
 .blogArticleContainerButton {
-  position:absolute;
-  display:flex;
-  width:100%;
-  left:0;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  left: 0;
   align-items: center;
   justify-content: center;
   bottom: -40px;
 }
 
 .clipAuthor {
-  bottom:-20px;
+  bottom: -20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height:40px;
-  width:100%;
+  height: 40px;
+  width: 100%;
   position: absolute;
 }
+
 .clipAuthor div {
-  z-index:1px;  
-  width:40px;
-  height:40px;
-  position:relative;
-  border-radius:40px;
+  z-index: 1px;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border-radius: 40px;
   background-color: white;
-  
+
   & img {
-    border-radius:40px;
-    padding:2px; 
+    z-index: 2;
+    border-radius: 40px;
+    padding: 2px;
     object-fit: cover;
-  
-    }
+
+  }
 }
 
 .clipAuthor::before {
-  z-index:-1;
+  z-index: -1;
   content: '';
   position: absolute;
-  left:0;
+  left: 0;
   width: 100px;
   height: 1px;
-  background:white
-  
-
+  background: transparent
 }
+
 .effectBlockArticle:hover .clipAuthor::before {
   transition: width 2s ease-out;
   content: '';
   position: absolute;
   width: 100%;
   height: 1px;
-  background:rgb(93, 2, 240);
+  background: transparent;
   box-shadow:
-   0px 0px 35px 15px rgba(70, 3, 228, 0.35)
-
+    0px 0px 35px 15px rgba(70, 3, 228, 0.6)
 }
+
 .clipAuthor::after {
-  z-index:-1;
+  z-index: -1;
   content: '';
   position: absolute;
-  right:0;
+  right: 0;
   width: 100px;
   height: 1px;
-  background:white
-  
-
+  background: transparent
 }
+
 .effectBlockArticle:hover .clipAuthor::after {
   transition: width 2s ease-out;
   content: '';
   width: 100%;
   height: 1px;
-  background:rgb(93, 2, 240);
+  background: transparent;
   box-shadow:
-   0px 0px 35px 15px rgba(70, 3, 228, 0.35)
-
+    0px 0px 35px 15px rgba(70, 3, 228, 0.6)
 }
 
 .effectBlockArticle:hover .clipAuthor {
   & div {
-    // border:0.1px solid white;
     transition: background ease 1s;
     background: rgb(93, 2, 240);
     box-shadow:
-    0px 0px 35px 15px rgba(93, 2, 240, 0.36);
+      0px 0px 25px 15px rgba(93, 2, 240, 0.6);
 
   }
 
