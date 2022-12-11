@@ -58,25 +58,25 @@ export function OrganismArticleBlock(
           <Link href={`/${props.postSlug}`}>
             <h1 style={{ textTransform: "none" }}>{props.title}</h1>
 
-            <p
+            {/* <p
               className={styles.blogArticleExcerpt}
               style={{ textTransform: "none" }}
             >
               {props.excerpt}
-            </p>
+            </p> */}
           </Link>
           <div className={styles.blogArticleMeta}>
             <span style={{ color: "white" }}>{props.author}</span>
             <span style={{ color: "white" }}>{props.date}</span>
           </div>
-          <div className={styles.blogArticleContainerButton}>
+          {/* <div className={styles.blogArticleContainerButton}>
             <p style={{ color: "white", fontSize: "12px" }}> 0 Comentários</p>
             <Link href={`/${props.postSlug}`}>
               <ButtonAtom>
                 <span>Continue Lendo</span>
               </ButtonAtom>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </article>
