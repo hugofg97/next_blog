@@ -38,13 +38,7 @@
 }
 
 .blogArticleBlock {
-  &:hover {
-    & h1 {
-   
-      text-shadow:0px 0px 10px  rgb(6, 246, 246)
-    }
 
-  }
   box-shadow: 0px 5px 10px 3px #080808ec;
   z-index: 1;
   position: relative;
