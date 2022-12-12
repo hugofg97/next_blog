@@ -3,6 +3,7 @@ import styles from "./styles/article-block.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import { ButtonAtom } from "components/atoms/button.atom";
+
 const sizes = `   (max-width: 320px) 320px,
 (max-width: 1140px) 400px,
 (max-width: 1240px) 400px,
@@ -71,9 +72,9 @@ export function OrganismArticleBlock(
           <div className={styles.blogArticleMeta}>
             <span style={{ color: "white" }}>{props.date}</span>
           </div>
-          <div className={styles.blogArticleContainerButton}>
+          {/* <div className={styles.blogArticleContainerButton}>
             <ButtonAtom text={"Ler Artigo"} />
-          </div>
+          </div> */}
         </div>
       </div>
     </article>
