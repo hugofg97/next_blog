@@ -18,8 +18,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div style={{ width: '100%', height: 600 }}></div>
-      <HomeBlogOranism></HomeBlogOranism>
+      {/* <div style={{ width: '100%', height: 600 }}></div>
+      <HomeBlogOranism></HomeBlogOranism> */}
     </div>
   )
 }
