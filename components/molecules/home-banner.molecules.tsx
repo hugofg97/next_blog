@@ -16,7 +16,7 @@ export function TitleContentHomeBanner(): JSX.Element {
       </TitleAtom>
       <ImageBoxAtom
         src="/images/moldura.webp"
-        quality={30}
+        quality={100}
         width={384}
         height={419}
         loading="eager"
