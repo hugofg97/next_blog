@@ -15,11 +15,36 @@ export default function Home() {
       <Layout>
         <>
           <div className={styles.brandContainer}>
+
             <div className={styles.firstLayer}>
               <div className={styles.titleBrand}>
                 <h1 >Gualb</h1>
-
               </div>
+
+            </div>
+            <div className={styles.contentAnim}>
+
+              <div className={styles.skillsLayer}>
+                <div className={styles.frontEnd}></div>
+                <div className={styles.backEnd}></div>
+                <div className={styles.infraEstrutura}></div>
+                <div className={styles.marketingSEO}></div>
+              </div>
+              <div className={styles.skillsLayer}>
+                <div className={styles.frontEnd}></div>
+                <div className={styles.backEnd}></div>
+                <div className={styles.infraEstrutura}></div>
+                <div className={styles.marketingSEO}></div>
+              </div>
+              <div className={styles.skillsLayer}>
+                <div className={styles.frontEnd}></div>
+                <div className={styles.backEnd}></div>
+                <div className={styles.infraEstrutura}></div>
+                <div className={styles.marketingSEO}></div>
+              </div>
+
+
+
             </div>
           </div>
         </>
