@@ -72,9 +72,6 @@ export function OrganismArticleBlock(
           <div className={styles.blogArticleMeta}>
             <span style={{ color: "white" }}>{props.date}</span>
           </div>
-          {/* <div className={styles.blogArticleContainerButton}>
-            <ButtonAtom text={"Ler Artigo"} />
-          </div> */}
         </div>
       </div>
     </article>
