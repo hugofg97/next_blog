@@ -1,9 +1,9 @@
-import Head from 'next/head'
+import Head from "next/head";
 
-import { HomeBanner, HomeBlogOranism } from '@organism';
-import styles from './styles/home/home.module.scss';
-import HeaderDesktopOrganism from 'components/organism/header-desktop.organism';
-import Layout from 'templates/layout';
+import { HomeBanner, HomeBlogOranism } from "@organism";
+import styles from "./styles/home/home.module.scss";
+import HeaderDesktopOrganism from "components/organism/header-desktop.organism";
+import Layout from "templates/layout";
 export default function Home() {
   return (
     <div>
@@ -15,35 +15,32 @@ export default function Home() {
       <Layout>
         <>
           <div className={styles.brandContainer}>
-
-
             <div className={styles.firstLayer}>
-              <div className={styles.titleBrand}>
-                <h1 >Gualb</h1>
+              <div style={{ display: 'flex', flexDirection: "column", width: '40%', gap: 2 }}>
+                <div className={styles.titleBrand}>
+                  <h1>Gualb</h1>
+                </div>
+                <div className={styles.secondLayer}>
+                  <div className={styles.sloganBrand}>
+                    <h1>Tecnologia e inovação tudo em um só lugar</h1>
+                    <p>Conheça nossas soluções, e dispare seu negócio</p>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.heroBrand}>
+
               </div>
             </div>
-
-
-
-
-
-            <div className={styles.lineBackground}>
-              <div className={`${styles.lineBackgroundL} ${styles.lineBackgroundL1}`}></div>
-              <div className={`${styles.lineBackgroundL} ${styles.lineBackgroundL2}`}></div>
-              <div className={`${styles.lineBackgroundL} ${styles.lineBackgroundL3}`}></div>
-              <div className={`${styles.lineBackgroundL} ${styles.lineBackgroundL4}`}></div>
-              <div className={`${styles.lineBackgroundL} ${styles.lineBackgroundL5}`}></div>
-              <div className={`${styles.lineBackgroundL} ${styles.lineBackgroundL6}`}></div>
-              <div className={`${styles.lineBackgroundL} ${styles.lineBackgroundL7}`}></div>
-              <div className={`${styles.lineBackgroundL} ${styles.lineBackgroundL8}`}></div>
-              <div className={`${styles.lineBackgroundL} ${styles.lineBackgroundL9}`}></div>
-            </div>
           </div>
-        </>
 
+          {/* <div style={{ display: 'flex', width: '100%', justifyContent: 'center' }}>
+
+                  <h2>WEB</h2>
+                  <h2>Mobile</h2>
+                  <h2>Desktop</h2>
+                </div> */}
+        </>
       </Layout>
-      {/* <div style={{ width: '100%', height: 600 }}></div>
-      <HomeBlogOranism></HomeBlogOranism> */}
     </div>
-  )
+  );
 }

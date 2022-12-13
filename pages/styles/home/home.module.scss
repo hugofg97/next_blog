@@ -4,14 +4,23 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
   width: 100%;
-}
-.firstLayer {
-  margin-top: 200px;
-  display: flex;
-  justify-content: start;
- 
   height: 100%;
+  // overflow-y: hidden;
+
+}
+
+.firstLayer {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  width: 100%;
+  gap: 0px;
+  flex-wrap: wrap;
+
+
 }
 
 .titleBrand {
@@ -25,6 +34,7 @@
   border-radius: 40px;
   -webkit-box-reflect: below -80px linear-gradient(to left bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.0656));
 }
+
 .titleBrand::before {
   z-index: 0;
   margin-top: 30px;
@@ -32,13 +42,11 @@
   content: "";
   height: 150px;
   width: 150px;
-  background: linear-gradient(
-    30deg,
-    #f00d,
-    rgb(249, 4, 98),
-    rgb(92, 1, 249),
-    rgb(183, 1, 249)
-  );
+  background: linear-gradient(30deg,
+      #f00d,
+      rgb(249, 4, 98),
+      rgb(92, 1, 249),
+      rgb(183, 1, 249));
   border-radius: 60px;
   filter: blur(20px);
 }
@@ -51,16 +59,15 @@
   content: "";
   height: 150px;
   width: 150px;
-  background: linear-gradient(
-    315deg,
-    #f00d,
-    rgb(249, 4, 98),
-    rgb(92, 1, 249),
-    rgb(183, 1, 249)
-  );
+  background: linear-gradient(315deg,
+      #f00d,
+      rgb(249, 4, 98),
+      rgb(92, 1, 249),
+      rgb(183, 1, 249));
   border-radius: 40px;
   color: white;
 }
+
 .titleBrand h1 {
   z-index: 5;
   font-size: 130px;
@@ -83,15 +90,18 @@
     width: 100%;
     margin-left: 8px;
   }
+
   .titleBrand h1 {
     font-size: 80px;
   }
+
   .titleBrand h1:first-child::first-letter {
     z-index: 2;
     font-size: 100px;
     margin-right: 15px;
     margin-left: 15px;
   }
+
   .titleBrand::before {
     height: 100px;
     width: 100px;
@@ -106,71 +116,293 @@
     width: 100px;
     border-radius: 30px;
   }
+
   .titleBrand h1::after {
     display: none;
   }
+
   .titleBrand h1::before {
     display: none;
   }
 }
 
-.lineBackground {
-   position: absolute;
-   width: 100%;
-   height: 100vh;
-   background: #131219;
-   z-index:-1;
-   top:80px;
-   overflow: hidden;
-}
-.lineBackgroundL {
-  position: absolute;
-  top: 0;
+
+.secondLayer {
+  max-width: 500px;
   width: 100%;
-  background: #131219;
-  z-index:11;
-  height:400px;
-  box-shadow: 0px 03px 15px rgba(0,0,0,1);
-
-} 
-
-
-.lineBackgroundL.lineBackgroundL1 {
-  background: rgb(92,1,249);
-  transform: rotate(0deg) translateY(50px);
-  z-index:10
- 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.lineBackgroundL.lineBackgroundL2 {
-  background: #FFF;
-  transform: rotate(0deg) translateY(100px);
-  z-index:9
- 
-}
-.lineBackgroundL.lineBackgroundL3 {
-  background: rgb(249,4,98);
-  transform: rotate(0deg) translateY(150px);
-  z-index:8
+
+.sloganBrand {
+  margin-top: 60px;
+  width: 100%;
  
 }
 
+.sloganBrand h1 {
+  text-align: start;
+  width: 100%;
+  background: -webkit-linear-gradient(315deg,
+      #f00d,
+      rgb(249, 4, 98),
+      rgb(92, 1, 249),
+      rgb(183, 1, 249));
+  -webkit-background-clip: text;
+  background-clip: transparent;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+.heroBrand {
+  position:relative;
+  width: 60%;
+  max-width: 100%;
+  height: 600px;
+  background: url('/images/brand.jpg');
+  object-fit: cover;
+  background-size: cover;
+
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 25% 100%, 52% 49%, 25% 0);
+  box-shadow: inset 13px 13px 15px #0b0b0b,inset -13px -13px 15px #0b0b0b;
+}
+.heroBrand::after {
+content:"";
+position:absolute;
+width: 100%;
+height:100%;
+background: linear-gradient(315deg,
+rgba(255, 0, 0, 0.5),
+rgba(249, 4, 98, 0.5),
+rgba(92, 1, 249, 0.5),
+rgba(183, 1, 249, 0.5));
 
 
-// .skillsLayer::after {
-//   z-index: -1;
-//   content: "";
 
-//   position: absolute;
-//   width: 99%;
-//   height: 93%;
-//   background: linear-gradient(
-//     315deg,
-//     #f00d,
-//     rgb(249, 4, 98),
-//     rgb(92, 1, 249),
-//     rgb(183, 1, 249)
-//   );
-//   border-radius: 120px;
-//   animation: rotateLayer 8s infinite;
+}
 
-// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sloganBrand h2 {
+  position: relative;
+}
+
+.sloganBrand h2:nth-of-type(1) {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+
+  margin-top: 200px;
+  margin-right: 0px;
+  border-radius: 45px;
+  background: #15141b;
+  backdrop-filter: blur(110px);
+  padding: 8px;
+  width: 210px;
+  height: 210px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+.sloganBrand h2:nth-of-type(1)::before {
+  z-index: -3;
+  position: absolute;
+  content: '';
+  top: 2;
+  border-radius: 45px;
+  width: 200px;
+  height: 200px;
+  background: rgb(249, 4, 98);
+  filter: blur(40px);
+
+}
+
+.sloganBrand h2:nth-of-type(1)::after {
+  z-index: -2;
+  position: absolute;
+  content: '';
+  top: -4;
+  border-radius: 45px;
+  border-bottom-right-radius: 500px;
+  width: 100%;
+  height: 100%;
+  background: rgb(249, 4, 98);
+  animation: rotateTa 0.8s infinite;
+  transform: rotate(130deg);
+  box-shadow: inset 10px 10px 35px rgba(92, 1, 249, 0.458), inset -10px -10px 35px rgba(92, 1, 249, 0.524),
+    10px 10px 35px rgba(10, 10, 10, 0.965), -10px -10px 35px rgba(19, 19, 20, 0.932);
+  transition: 1s ease;
+
+}
+
+.sloganBrand p {
+  color: white;
+  text-align: start;
+  font-size: 2rem;
+
+}
+
+.sloganBrand h2:nth-of-type(2) {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+
+  border-radius: 45px;
+  background: #15141b;
+  backdrop-filter: blur(110px);
+  padding: 8px;
+  width: 210px;
+  height: 210px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+.sloganBrand h2:nth-of-type(2)::before {
+  z-index: -3;
+  position: absolute;
+  content: '';
+  top: 2;
+  border-radius: 45px;
+  width: 200px;
+  height: 200px;
+  background: rgb(249, 4, 98);
+  filter: blur(40px);
+
+}
+
+.sloganBrand h2:nth-of-type(2)::after {
+  z-index: -2;
+  position: absolute;
+  content: '';
+  top: -4;
+  border-radius: 45px;
+  border-bottom-right-radius: 50px;
+  width: 100%;
+  height: 100%;
+  background: rgb(249, 4, 98);
+  animation: rotateTa 0.8s infinite;
+  transform: rotate(220deg);
+  box-shadow: inset 10px 10px 35px rgba(92, 1, 249, 0.458), inset -10px -10px 35px rgba(92, 1, 249, 0.524),
+    10px 10px 35px rgba(10, 10, 10, 0.965), -10px -10px 35px rgba(19, 19, 20, 0.932);
+  transition: 1s ease;
+
+}
+
+.sloganBrand h2:nth-of-type(3) {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  margin-top: 180px;
+
+  border-radius: 45px;
+  background: #15141b;
+  backdrop-filter: blur(110px);
+  padding: 8px;
+  width: 210px;
+  height: 210px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+.sloganBrand h2:nth-of-type(3)::before {
+  z-index: -3;
+  position: absolute;
+  content: '';
+  top: 2;
+  border-radius: 45px;
+  width: 200px;
+  height: 200px;
+  background: rgb(249, 4, 98);
+  filter: blur(40px);
+
+}
+
+.sloganBrand h2:nth-of-type(3)::after {
+  z-index: -2;
+  position: absolute;
+  content: '';
+  top: -4;
+  border-radius: 45px;
+  border-bottom-right-radius: 500px;
+  width: 100%;
+  height: 100%;
+  background: rgb(249, 4, 98);
+  animation: rotateTa 0.8s infinite;
+  transform: rotate(-50deg);
+  box-shadow: inset 10px 10px 35px rgba(92, 1, 249, 0.458), inset -10px -10px 35px rgba(92, 1, 249, 0.524),
+    10px 10px 35px rgba(10, 10, 10, 0.965), -10px -10px 35px rgba(19, 19, 20, 0.932);
+  transition: 1s ease;
+
+}
