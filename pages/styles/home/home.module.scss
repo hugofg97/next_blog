@@ -1,17 +1,16 @@
 .brandContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  //   height: 800px;
+  flex-wrap: wrap;
   width: 100%;
 }
 .firstLayer {
   margin-top: 200px;
   display: flex;
   justify-content: start;
-  width: 100%;
-  max-width: 1200px;
+ 
   height: 100%;
 }
 
@@ -21,8 +20,6 @@
   align-items: center;
   position: relative;
   height: 150px;
-  // width: 470px;
-  // margin-left:16px;
   margin-top: 30px;
   padding-bottom: 30px;
   border-radius: 40px;
@@ -62,8 +59,6 @@
     rgb(183, 1, 249)
   );
   border-radius: 40px;
-  //   box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 1),
-  //     inset -2px -2px 5px rgba(0, 0, 0, 1);
   color: white;
 }
 .titleBrand h1 {
@@ -118,174 +113,64 @@
     display: none;
   }
 }
-.contentAnim {
-  z-index: -1;
-  position: absolute;
-  width: 100%;
-  // background:#fff;
-  height: 600px;
-  top: 100px;
-  // flex-wrap: wrap;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @media (max-wdth: 400px) {
-    width: 100%;
-  }
+
+.lineBackground {
+   position: absolute;
+   width: 100%;
+   height: 100vh;
+   background: #131219;
+   z-index:-1;
+   top:80px;
+   overflow: hidden;
 }
-.skillsLayer {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 410px;
-  height: 510px;
-  min-width: 410px;
-  width: 510px;
-  margin-top: 80px;
-  flex-wrap: wrap;
-  background: #131219;
-  gap: 2px;
-  transform: rotate(45deg);
-  overflow-y: hidden;
-  overflow-x: hidden;
-  overflow: hidden;
-  @media (max-wdth: 400px) {
-    width: 100%;
-  }
-  //   box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 1),
-  //     inset -2px -2px 5px rgba(0, 0, 0, 1);
-}
-
-.skillsLayer::before {
-  z-index: -1;
-  content: "";
+.lineBackgroundL {
   position: absolute;
-  width: 1px;
-
-  height: 100%;
-
   top: 0;
-  background: linear-gradient(
-    315deg,
-    #f00d,
-    rgb(249, 4, 98),
-    rgb(92, 1, 249),
-    rgb(183, 1, 249)
-  );
-  border-radius: 120px;
-  animation: rotateLayerBefore 4s infinite;
+  width: 100%;
+  background: #131219;
+  z-index:11;
+  height:400px;
+  box-shadow: 0px 03px 15px rgba(0,0,0,1);
 
-}
-.skillsLayer::after {
-  z-index: -1;
-  content: "";
+} 
 
-  position: absolute;
-  width: 1px;
-  height: 200%;
-  background: linear-gradient(
-    315deg,
-    #f00d,
-    rgb(249, 4, 98),
-    rgb(92, 1, 249),
-    rgb(183, 1, 249)
-  );
-  border-radius: 120px;
-  animation: rotateLayer 6s infinite;
 
+.lineBackgroundL.lineBackgroundL1 {
+  background: rgb(92,1,249);
+  transform: rotate(0deg) translateY(50px);
+  z-index:10
  
 }
-@keyframes rotateLayerBefore {
-  0% {
-    transform: rotate(0deg);
-
-    height: 0px;
-    width: 0px;
-  }
-
-  50% {
-    // transform: rotate(350deg);
-    width: 100%;
-    height: 100%;
-  }
-  100% {
-    transform: rotate(350deg);
-    height: 0px;
-    width: 0px;
-  }
-
+.lineBackgroundL.lineBackgroundL2 {
+  background: #FFF;
+  transform: rotate(0deg) translateY(100px);
+  z-index:9
+ 
 }
-@keyframes rotateLayer {
-  0% {
-    height: 0px;
-    width: 0px;
-    transform: rotate(0deg);
-
-  }
-
-  50% {
-    transform: rotate(350deg);
-    width: 100%;
-    height: 100%;
-
-  }
-  100% {
-    // transform: rotate(350deg);
-    height: 0px;
-    width: 0px;
-  }
-
+.lineBackgroundL.lineBackgroundL3 {
+  background: rgb(249,4,98);
+  transform: rotate(0deg) translateY(150px);
+  z-index:8
+ 
 }
 
-.frontEnd {
-  margin: 0;
 
-  z-index: 9;
-  width: 49.5%;
-  height: 49.5%;
-  background: #131219;
-  //   border-radius: 50px;
-  transform: rotate(0deg);
-  //   box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 1),
-  //     inset -2px -2px 5px rgba(0, 0, 0, 1);
-}
-.backEnd {
-  margin: 0;
 
-  z-index: 9;
-  width: 49.5%;
-  height: 49.5%;
-  background: #131219;
-  //   border-radius: 50px;
-  transform: rotate(0deg);
-  //   box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 1),
-  //     inset -2px -2px 5px rgba(0, 0, 0, 1);
-}
-.infraEstrutura {
-  margin: 0;
+// .skillsLayer::after {
+//   z-index: -1;
+//   content: "";
 
-  z-index: 9;
-  width: 49.5%;
-  height: 49.5%;
-  background: #131219;
-  //   border-radius: 50px;
-  transform: rotate(0deg);
-  //   box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 1),
-  //     inset -2px -2px 5px rgba(0, 0, 0, 1);
-}
-.marketingSEO {
-  margin: 0;
+//   position: absolute;
+//   width: 99%;
+//   height: 93%;
+//   background: linear-gradient(
+//     315deg,
+//     #f00d,
+//     rgb(249, 4, 98),
+//     rgb(92, 1, 249),
+//     rgb(183, 1, 249)
+//   );
+//   border-radius: 120px;
+//   animation: rotateLayer 8s infinite;
 
-  z-index: 9;
-  width: 49.5%;
-  height: 49.5%;
-  background: #131219;
-  //   border-radius: 50px;
-  transform: rotate(0deg);
-  //   box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 1),
-  //     inset -2px -2px 5px rgba(0, 0, 0, 1);
-}
+// }

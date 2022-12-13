@@ -16,35 +16,27 @@ export default function Home() {
         <>
           <div className={styles.brandContainer}>
 
+
             <div className={styles.firstLayer}>
               <div className={styles.titleBrand}>
                 <h1 >Gualb</h1>
               </div>
-
             </div>
-            <div className={styles.contentAnim}>
-
-              <div className={styles.skillsLayer}>
-                <div className={styles.frontEnd}></div>
-                <div className={styles.backEnd}></div>
-                <div className={styles.infraEstrutura}></div>
-                <div className={styles.marketingSEO}></div>
-              </div>
-              <div className={styles.skillsLayer}>
-                <div className={styles.frontEnd}></div>
-                <div className={styles.backEnd}></div>
-                <div className={styles.infraEstrutura}></div>
-                <div className={styles.marketingSEO}></div>
-              </div>
-              <div className={styles.skillsLayer}>
-                <div className={styles.frontEnd}></div>
-                <div className={styles.backEnd}></div>
-                <div className={styles.infraEstrutura}></div>
-                <div className={styles.marketingSEO}></div>
-              </div>
 
 
 
+
+
+            <div className={styles.lineBackground}>
+              <div className={`${styles.lineBackgroundL} ${styles.lineBackgroundL1}`}></div>
+              <div className={`${styles.lineBackgroundL} ${styles.lineBackgroundL2}`}></div>
+              <div className={`${styles.lineBackgroundL} ${styles.lineBackgroundL3}`}></div>
+              <div className={`${styles.lineBackgroundL} ${styles.lineBackgroundL4}`}></div>
+              <div className={`${styles.lineBackgroundL} ${styles.lineBackgroundL5}`}></div>
+              <div className={`${styles.lineBackgroundL} ${styles.lineBackgroundL6}`}></div>
+              <div className={`${styles.lineBackgroundL} ${styles.lineBackgroundL7}`}></div>
+              <div className={`${styles.lineBackgroundL} ${styles.lineBackgroundL8}`}></div>
+              <div className={`${styles.lineBackgroundL} ${styles.lineBackgroundL9}`}></div>
             </div>
           </div>
         </>
