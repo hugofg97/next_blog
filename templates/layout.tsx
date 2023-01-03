@@ -17,15 +17,15 @@ const Layout = ({ children, bg }: { children: JSX.Element, bg?: string }): JSX.E
       <div style={{ display: 'flex', justifyContent: "center" }}>
         <div className={headerStyles.headerDesktop}>
 
-          <div style={{ width: 180, height: 50, position: 'relative', }}>
+          <div style={{ width: 80, height: 65, position: 'relative', }}>
 
-            <Image
+            {/* <Image
               alt="Linkou App"
-              src="/images/logo.png"
+              src="/images/logo-icon.png"
               fill
               quality="50"
               loading="eager"
-            />
+            /> */}
           </div>
 
           <div className={headerStyles.menuList}>

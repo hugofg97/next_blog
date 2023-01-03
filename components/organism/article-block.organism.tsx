@@ -15,7 +15,7 @@ interface Classes {
   img: string;
   block: string;
 }
-interface ArticleBlockOrganismInterface {
+export interface ArticleBlockOrganismInterface {
   classes: Classes;
   image: string;
   categoryName: string;
@@ -25,7 +25,6 @@ interface ArticleBlockOrganismInterface {
   excerpt: string;
   author: string;
   date: string;
-  square: string;
   imageWidth: number;
   imageHeight: number;
   articleContent: string;

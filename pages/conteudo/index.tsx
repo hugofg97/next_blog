@@ -3,10 +3,12 @@ import styles from '@styles/blog/blog-page.module.scss'
 import articleStyles from 'components/organism/styles/article-block.module.scss'
 import Layout from "templates/layout";
 import { posts } from "mocks";
-import { OrganismArticleBlock } from "@organism";
+import { ArticleBlockOrganismInterface, OrganismArticleBlock } from "@organism";
 import { SidebarOrganism } from "components/organism/sidebar.organism";
+import { PaginationBlog } from "components/organism/pagination-blog.organism";
 
-function BlogPage(): JSX.Element {
+
+function BlogPage({ postList }: { postList: ArticleBlockOrganismInterface[] }): JSX.Element {
   return (
     <div>
       <Head>
@@ -38,15 +40,15 @@ function BlogPage(): JSX.Element {
                 </div>
               </div> */}
                 <div className={styles.blogArticlesContainer}>
-                  {posts.map((post, index) => {
+                  {postList.map((post, index) => {
 
 
                     return (
                       <OrganismArticleBlock
+                        {...post}
+                        key={index}
                         index={index}
                         classes={{ block: articleStyles.blogArticleBlockSquare, img: articleStyles.blogFeatureImageBlockSquare }}
-                        key={index}
-                        {...post}
                       ></OrganismArticleBlock>
                     )
 
@@ -54,6 +56,8 @@ function BlogPage(): JSX.Element {
                   })}
                 </div>
               </div>
+              <PaginationBlog></PaginationBlog>
+
             </div>
             <div style={{ position: "static" }}>
               <SidebarOrganism></SidebarOrganism>
@@ -66,3 +70,10 @@ function BlogPage(): JSX.Element {
 }
 
 export default BlogPage;
+export async function getStaticProps() {
+  return {
+    props: {
+      postList: posts
+    }
+  }
+}
